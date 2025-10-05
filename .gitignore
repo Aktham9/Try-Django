@@ -1,20 +1,14 @@
-# Django
-*.log
-*.pot
-*.pyc
+# Python cache
 __pycache__/
+*.py[cod]
+
+# Django database
 db.sqlite3
-/media
-/staticfiles
 
-# Virtual environment
-venv/
-.env/
-.venv/
+# Environment files
+.env
+*.log
 
-# PyCharm
+# IDE files
+.vscode/
 .idea/
-
-# OS files
-.DS_Store
-Thumbs.db
