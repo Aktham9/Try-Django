@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<form >
+
+
+    <!--{{object}}-->
+    {% for ins in object %}
+    {% comment %}
+    <!--<p>{{ins.id}} - <a href="/product/{{ins.id}}">{{ins.title}}</a></p>-->
+    <!--OR -->
+    <!-- <p>{{ins.id}} - <a href="{% url 'DU' ins.id %}">{{ins.title}}</a></p> -->
+    {% endcomment%}
+
+    <p> {{ins.id}} - <a href="{{ins.get_absolute_url}}"> {{ins.title}}</a></p>
+
+
+    {% endfor %}
+
+
+</form>
+
+{% endblock %}
+</body>
+</html>

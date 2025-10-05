@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+{% block content %}
+
+{% for ins in object %}
+
+<p>{{ins.id}} - <a href="{{ins.get_absolute_url}}">{{ins.title}}</a> </p>
+
+{% endfor %}
+
+{% endblock %}
+
+</body>
+</html>
